@@ -1,0 +1,38 @@
+{
+  "pretrain": {
+    "seed": 42,
+    "epochs": 100,
+    "batch_size": 32,
+    "lr": 0.001,
+    "detection_weight": 0.3,
+    "consistency_weight": 0.1,
+    "replace_ratio": 0.15,
+    "subgraph_ratio": 0.2,
+    "temperature": 0.1
+  },
+  "downstream": {
+    "seed": 42,
+    "batch_size": 2048,
+    "lr": 0.0005,
+    "weight_decay": 0.0001,
+    "dropout": 0.55,
+    "mlp_dropout": 0.3,
+    "dgi_node_weight": 0.05,
+    "dgi_edge_weight": 0.1,
+    "ipe_weight": 0.1,
+    "margin": 0.3,
+    "theta": 2.0
+  },
+  "datasets": {
+    "Deng": {
+      "epochs": 300,
+      "patience": 50,
+      "macro_labels": "observed"
+    },
+    "Ryu": {
+      "epochs": 300,
+      "patience": 50,
+      "macro_labels": "observed"
+    }
+  }
+}
